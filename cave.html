@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La cave — Bras de Fer, Nantes</title>
+  <meta name="description" content="La carte des vins du Bras de Fer à Nantes : vins naturels au verre et à la bouteille, blancs, rouges et pét'nat." />
+  <link rel="icon" type="image/png" href="assets/img/logo.png?v=2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&family=Permanent+Marker&family=Caveat:wght@500;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=42" />
+</head>
+<body id="top" class="menu-page">
+
+  <!-- grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- filtres papier -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="rough-edge" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018 0.024" numOctaves="3" seed="7" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="rough-edge-soft" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02 0.03" numOctaves="2" seed="12" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ══════════ NAV ══════════ -->
+  <header class="nav">
+    <a class="nav__brand" href="index.html">BRAS DE FER</a>
+    <a class="btn btn--red nav__resa" href="index.html">← Retour au site</a>
+  </header>
+
+  <!-- ══════════ EN-TÊTE CAVE ══════════ -->
+  <section class="menu-hero">
+    <img class="menu-hero__logo" src="assets/img/logo-mains.png" alt="" aria-hidden="true" />
+    <span class="chip chip--green">La cave</span>
+    <h1>Les vins</h1>
+    <p class="menu-hero__sub">Vins vivants, au verre (12&nbsp;cl) ou à la bouteille (75&nbsp;cl) —<br />sur place ou à emporter à prix cave.</p>
+  </section>
+
+  <!-- ══════════ CARTE DES VINS ══════════ -->
+  <main class="menu-body section paper-bg torn-top">
+
+    <div class="menu-grid">
+
+      <section class="menu-block reveal">
+        <span class="chip chip--yellow">Vins blancs</span>
+        <ul class="menu-list">
+          <li>
+            <span class="menu-list__name">Enfants Sages — Bras de Fer<em>VDF — melon B</em></span>
+            <span class="menu-list__dots"></span><strong>4&nbsp;€ / 24&nbsp;€</strong>
+          </li>
+          <li>
+            <span class="menu-list__name">Mana — vin orange<em>VDF — chardonnay</em></span>
+            <span class="menu-list__dots"></span><strong>5&nbsp;€ / 27&nbsp;€</strong>
+          </li>
+          <li>
+            <span class="menu-list__name">Fié Gris — Delaunay<em>VDF — sauvignon</em></span>
+            <span class="menu-list__dots"></span><strong>7&nbsp;€ / 40&nbsp;€</strong>
+          </li>
+        </ul>
+      </section>
+
+      <section class="menu-block reveal">
+        <span class="chip chip--red">Vins rouges</span>
+        <ul class="menu-list">
+          <li>
+            <span class="menu-list__name">Bonne Mine — Bras de Fer<em>VDF — grolleau</em></span>
+            <span class="menu-list__dots"></span><strong>4&nbsp;€ / 24&nbsp;€</strong>
+          </li>
+          <li>
+            <span class="menu-list__name">À Nos Pères<em>VDF — cabernet franc</em></span>
+            <span class="menu-list__dots"></span><strong>4&nbsp;€ / 24&nbsp;€</strong>
+          </li>
+          <li>
+            <span class="menu-list__name">La Tonique — I &amp; A Nareika<em>VDF — grenache, syrah, cinsault</em></span>
+            <span class="menu-list__dots"></span><strong>3,5&nbsp;€ / 21,5&nbsp;€</strong>
+          </li>
+        </ul>
+      </section>
+
+      <section class="menu-block reveal">
+        <span class="chip chip--purple">Pét' nat</span>
+        <ul class="menu-list">
+          <li>
+            <span class="menu-list__name">Phil Save the Bul' — Delaunay</span>
+            <span class="menu-list__dots"></span><strong>5&nbsp;€ / 24,5&nbsp;€</strong>
+          </li>
+        </ul>
+      </section>
+
+      <section class="menu-block reveal">
+        <span class="chip chip--blue">Et en cave</span>
+        <ul class="menu-list">
+          <li><span class="menu-list__name">~70 références naturelles</span><span class="menu-list__dots"></span><strong>prix cave</strong></li>
+        </ul>
+        <p class="menu-block__note">Bouju, Dufaitre, Fond Cyprès, AMI, Chatillon… et notre cuvée maison vinifiée à l'Agronaute.</p>
+      </section>
+
+    </div>
+
+    <p class="menu-body__script">La carte change au fil des ouvertures&nbsp;!</p>
+
+    <div class="menu-body__back reveal">
+      <a class="btn btn--red" href="index.html">← Retour au site</a>
+      <a class="btn btn--mint" href="menu.html">Voir le menu</a>
+    </div>
+
+    <img class="spark spark--menu" src="assets/img/etoile.png" alt="" aria-hidden="true" />
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer torn-top">
+    <div class="footer__brand">
+      <span class="footer__logo"><img src="assets/img/logo.png?v=2" alt="" /></span>
+      BRAS DE FER — NANTES
+    </div>
+    <nav class="footer__legal">
+      <a href="index.html#infos">Infos pratiques</a>
+    </nav>
+  </footer>
+
+  <script src="main.js?v=42"></script>
+</body>
+</html>

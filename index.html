@@ -3,360 +3,307 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bras de Fer — Cave festive, bar à vins &amp; restaurant à Nantes</title>
-  <meta name="description" content="Bras de Fer, cave festive, bar à vins naturels et restaurant sur l'île de Nantes. Du mardi au samedi, 20 boulevard de la Prairie au Duc. On grille, on sauce !" />
+  <title>Bras de Fer — Restaurant, bar &amp; cave festifs à Nantes</title>
+  <meta name="description" content="Bras de Fer, restaurant, bar & cave festifs à Nantes. Bières naturelles, vins vivants, cuisine locale & musiques libres. Du mardi au samedi, île de Nantes." />
   <link rel="icon" type="image/png" href="assets/img/logo.png?v=2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Instrument+Serif:ital@0;1&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=25" />
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&family=Permanent+Marker&family=Caveat:wght@500;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=42" />
 </head>
-<body>
+<body id="top">
 
-  <!-- ══════════ INTRO ══════════ -->
+  <!-- grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- intro d'ouverture -->
   <div class="intro" id="intro" aria-hidden="true">
-    <div class="intro__inner">
-      <img class="intro__logo" src="assets/img/logo.png?v=2" alt="" />
-      <h1 class="intro__title">
-        <span class="intro__word"><span class="l">B</span><span class="l">R</span><span class="l">A</span><span class="l">S</span></span>
-        <span class="intro__word"><span class="l">D</span><span class="l">E</span>&nbsp;<span class="l">F</span><span class="l">E</span><span class="l">R</span></span>
-      </h1>
-      <p class="intro__tag">On grille, on sauce&nbsp;!</p>
-    </div>
-    <div class="intro__panel intro__panel--1"></div>
-    <div class="intro__panel intro__panel--2"></div>
+    <img class="intro__logo" src="assets/img/logo-mains.png" alt="" />
+    <p class="intro__brand">Bras de Fer</p>
+    <p class="intro__sub">Restaurant, bar &amp; cave — Nantes</p>
   </div>
+
+  <!-- filtres papier -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="rough-edge" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018 0.024" numOctaves="3" seed="7" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="rough-edge-soft" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02 0.03" numOctaves="2" seed="12" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
 
   <!-- ══════════ NAV ══════════ -->
-  <header class="nav" id="nav">
-    <a class="nav__brand" href="#top">
-      <img src="assets/img/logo.png?v=2" alt="Bras de Fer" />
-      <span>Bras <em>de</em> Fer</span>
-    </a>
-    <nav class="nav__links">
+  <header class="nav">
+    <a class="nav__brand" href="#top">BRAS DE FER</a>
+    <nav class="nav__links" id="navLinks">
       <a href="#lieu">Le lieu</a>
-      <a href="#cave">La cave</a>
-      <a href="#cuisine">La cuisine</a>
-      <a href="#soirees">Les soirées</a>
+      <a href="#menu">Menu</a>
+      <a href="#cave">Le vin</a>
+      <a href="#soirees">Soirées</a>
+      <a href="#infos">Réservation</a>
       <a href="#infos">Infos</a>
     </nav>
-    <div class="nav__cta">
-      <a class="btn btn--ghost" href="https://www.instagram.com/brasdefernantes/" target="_blank" rel="noopener">Instagram&nbsp;↗</a>
-      <a class="btn btn--red" href="mailto:resa.brasdefer@gmail.com">Réserver</a>
-    </div>
-    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+    <a class="btn btn--red nav__resa" href="tel:0272016630">Réserver</a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </header>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#lieu">Le lieu</a>
-    <a href="#cave">La cave</a>
-    <a href="#cuisine">La cuisine</a>
-    <a href="#soirees">Les soirées</a>
-    <a href="#infos">Infos</a>
-    <a class="mobile-menu__resa" href="mailto:resa.brasdefer@gmail.com">Réserver une table →</a>
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero">
+    <img class="hero__logo" src="assets/img/logo-mains.png" alt="" aria-hidden="true" />
+
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <span class="hero__line">Restaurant,</span>
+        <span class="hero__line">Bar <em class="amp">&amp;</em> Cave</span>
+        <span class="hero__marker">Festifs à Nantes</span>
+      </h1>
+      <svg class="hero__scribble" viewBox="0 0 260 28" aria-hidden="true">
+        <path d="M4 17 C 18 12, 34 19, 52 15 S 88 10, 112 16 S 152 20, 178 13 S 226 9, 256 15" fill="none" stroke="#C93A57" stroke-width="6.5" stroke-linecap="round"/>
+        <path d="M10 22 C 42 18, 84 23, 128 19 S 208 14, 248 20" fill="none" stroke="#C93A57" stroke-width="3.5" stroke-linecap="round" opacity=".8"/>
+      </svg>
+
+      <p class="hero__days"><mark>Du mardi au samedi</mark></p>
+
+      <ul class="hero__hours">
+        <li>
+          <span class="hero__ico hero__ico--img">
+            <img src="assets/img/ico-verre.png" alt="" />
+          </span>
+          <div><strong>Bar</strong><br />16h – 2h</div>
+        </li>
+        <li>
+          <span class="hero__ico">
+            <svg viewBox="0 0 24 24"><path d="M10 3h4v4c1.5 1 2 2.5 2 4v9a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-9c0-1.5.5-3 2-4V3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </span>
+          <div><strong>Cave</strong><br />16h – 22h</div>
+        </li>
+        <li>
+          <span class="hero__ico hero__ico--img">
+            <img src="assets/img/ico-assiette.png" alt="" />
+          </span>
+          <div><strong>Restauration</strong><br />19h00 – 22h</div>
+        </li>
+      </ul>
+    </div>
+
+    <img class="hero__note" src="assets/img/note-hero.png" alt="Bières naturelles, vins vivants, cuisine locale &amp; musiques libres" />
+
+    <img class="spark spark--hero" src="assets/img/etoile.png" alt="" aria-hidden="true" />
+  </section>
+
+  <!-- ══════════ MARQUEE ══════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>• Du mardi au samedi &nbsp;•&nbsp; Bar 16h–2h &nbsp;•&nbsp; Cave 16h–22h &nbsp;•&nbsp; Restauration 19h–22h &nbsp;</span><span>• Du mardi au samedi &nbsp;•&nbsp; Bar 16h–2h &nbsp;•&nbsp; Cave 16h–22h &nbsp;•&nbsp; Restauration 19h–22h &nbsp;</span><span>• Du mardi au samedi &nbsp;•&nbsp; Bar 16h–2h &nbsp;•&nbsp; Cave 16h–22h &nbsp;•&nbsp; Restauration 19h–22h &nbsp;</span>
+    </div>
   </div>
 
-  <main id="top">
-
-    <!-- ══════════ HERO ══════════ -->
-    <section class="hero">
-      <div class="hero__stamp">
-        <img src="assets/img/logo.png?v=2" alt="" />
-      </div>
-
-      <p class="hero__kicker" data-hero>Île de Nantes — depuis la Prairie au Duc</p>
-
-      <h2 class="hero__title" aria-label="Bras de Fer">
-        <span class="hero__line" data-hero-line>BRAS</span>
-        <span class="hero__line hero__line--2" data-hero-line>DE FER<span class="hero__asterisk">✶</span></span>
-      </h2>
-
-      <p class="hero__sub" data-hero>
-        <span>Cave festive</span><i>✶</i><span>Bar à vins</span><i>✶</i><span>Restaurant</span>
+  <!-- ══════════ LE LIEU ══════════ -->
+  <section class="lieu section paper-bg" id="lieu">
+    <div class="lieu__text reveal">
+      <span class="chip chip--blue">Le lieu</span>
+      <h2>Un lieu vivant, chaleureux et sans prétention.</h2>
+      <p>Bras de Fer, c'est l'envie de rassembler autour d'un verre, d'une assiette et d'une bonne musique.<br />
+      Une cave éclectique, une table de saison et des soirées qui secouent.</p>
+      <p class="lieu__script">À Nantes, sur l'île.
+        <svg class="doodle-arrow" viewBox="0 0 70 24" aria-hidden="true"><path d="M2 12 C 20 8, 40 14, 62 11 M54 5l9 6-10 5" fill="none" stroke="#4D5FD8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </p>
+    </div>
+    <div class="lieu__collage reveal reveal-kids">
+      <figure class="ph ph--tall"><img src="assets/img/facade-hd.jpg" alt="La devanture du Bras de Fer" /></figure>
+      <figure class="ph"><img src="assets/img/mural.jpg" alt="Fresque murale" /></figure>
+      <figure class="ph"><img src="assets/img/terrasse-hd.jpg" alt="La terrasse en plein soleil" /></figure>
+      <figure class="ph"><img src="assets/img/roses.jpg" alt="Ambiance" /></figure>
+      <figure class="ph"><img src="assets/img/soiree-hd.jpg" alt="Soirée au Bras de Fer" /></figure>
+      <img class="sticker sticker--green" src="assets/img/sticker-vert.png" alt="" />
+      <img class="sticker sticker--goodtimes" src="assets/img/goodtimes.png" alt="Good times" />
+    </div>
+  </section>
 
-      <p class="hero__desc" data-hero>
-        Du vin naturel, des brochettes au feu, une boule à facettes.
-        Une cave où l'on trinque tôt et où l'on danse tard,
-        du mardi au samedi.
-      </p>
+  <!-- ══════════ CUISINE ══════════ -->
+  <section class="cuisine section torn-top" id="menu">
+    <div class="cuisine__text reveal">
+      <span class="chip chip--red">À table !</span>
+      <h2>Cuisine locale, saisonnière, souvent bio.</h2>
+      <p>Des produits frais, des producteurs de proximité et une carte qui change au gré des saisons et de l'inspiration.</p>
+      <a class="btn btn--pink" href="menu.html">Voir le menu</a>
+    </div>
+    <ul class="cuisine__plates reveal reveal-kids">
+      <li>
+        <figure class="plate"><img src="assets/img/plat-carpaccio.jpg" alt="Carpaccio de maquereau" /></figure>
+        <h3 class="dish dish--cream">Carpaccio de maquereau</h3>
+        <p>Betterave, agrumes,<br />moutarde &amp; herbes fraîches</p>
+        <strong>12&nbsp;€</strong>
+      </li>
+      <li>
+        <figure class="plate"><img src="assets/img/plat-legumes.jpg" alt="Légumes rôtis" /></figure>
+        <h3 class="dish dish--green">Légumes rôtis</h3>
+        <p>Lebneh, zaatar,<br />noisettes &amp; herbes</p>
+        <strong>11&nbsp;€</strong>
+      </li>
+      <li>
+        <figure class="plate"><img src="assets/img/plat-tartare.jpg" alt="Tartare de bœuf" /></figure>
+        <h3 class="dish dish--red">Tartare de bœuf</h3>
+        <p>Condiments, câpres,<br />jaune d'œuf</p>
+        <strong>14&nbsp;€</strong>
+      </li>
+      <li>
+        <figure class="plate"><img src="assets/img/plat-baba.jpg" alt="Baba ganouj" /></figure>
+        <h3 class="dish dish--pink">Baba ganouj</h3>
+        <p>Tahini, grenade,<br />huile d'olive &amp; pain grillé</p>
+        <strong>9&nbsp;€</strong>
+      </li>
+    </ul>
+    <img class="spark spark--cuisine" src="assets/img/etoile.png" alt="" aria-hidden="true" />
+  </section>
 
-      <div class="hero__cta" data-hero>
-        <a class="btn btn--red btn--big" href="mailto:resa.brasdefer@gmail.com">Réserver une table&nbsp;→</a>
-        <a class="btn btn--outline btn--big" href="#cuisine">Voir la carte</a>
+  <!-- ══════════ LA CAVE ══════════ -->
+  <section class="cave section" id="cave">
+    <div class="cave__text reveal">
+      <span class="chip chip--green">La cave</span>
+      <h2>Vins naturels <em class="amp-cream">&amp;</em> belles découvertes</h2>
+      <p>Notre cave regorge de vins vivants, sélectionnés avec passion auprès de vignerons en agriculture douce, ici et ailleurs. À boire sur place ou à emporter, toujours à prix juste.</p>
+      <a class="btn btn--mint" href="cave.html">Découvrir la cave</a>
+    </div>
+    <figure class="cave__photo reveal">
+      <img src="assets/img/cave-hd.jpg" alt="Le mur de bouteilles de la cave" />
+      <img class="sticker sticker--pink" src="assets/img/sticker-rose.png" alt="" />
+    </figure>
+    <aside class="cave__panel reveal">
+      <h3>Des bouteilles à emporter à prix cave.</h3>
+      <div class="cave__bottle" aria-hidden="true">
+        <img src="assets/img/bouteille-main.png" alt="" />
       </div>
+    </aside>
+    <img class="spark spark--cave" src="assets/img/etoile.png" alt="" aria-hidden="true" />
+  </section>
 
-      <div class="hero__hours" data-hero>
-        <div><b>Bar</b><span>16h — 2h</span></div>
-        <div><b>Cave</b><span>16h — 22h</span></div>
-        <div><b>Cuisine</b><span>19h — 22h</span></div>
-        <div><b>Jours</b><span>mardi — samedi</span></div>
+  <!-- ══════════ SOIRÉES ══════════ -->
+  <section class="soirees section" id="soirees">
+    <div class="soirees__head reveal">
+      <div>
+        <span class="chip chip--purple">Les soirées</span>
+        <h2>Musique, rencontres et nuits libres.</h2>
       </div>
-
-      <figure class="polaroid polaroid--hero1" data-parallax="40">
-        <img src="assets/img/interieur.jpg" alt="Le bar et ses lampes" />
-        <figcaption>au comptoir</figcaption>
-      </figure>
-      <figure class="polaroid polaroid--hero2" data-parallax="70">
-        <img src="assets/img/roses.jpg" alt="Bouteilles en cave" />
-        <figcaption>la cave</figcaption>
-      </figure>
-    </section>
-
-    <!-- marquee -->
-    <div class="marquee marquee--red">
-      <div class="marquee__track">
-        <span>Vins naturels ✶ On grille, on sauce&nbsp;! ✶ DJ sets ✶ Expos ✶ Cave à emporter ✶ Terrasse cachée ✶ </span><span>Vins naturels ✶ On grille, on sauce&nbsp;! ✶ DJ sets ✶ Expos ✶ Cave à emporter ✶ Terrasse cachée ✶ </span>
-      </div>
+      <a class="btn btn--pink" href="https://www.instagram.com/brasdefernantes/" target="_blank" rel="noopener">Voir toutes les soirées</a>
     </div>
 
-    <!-- ══════════ LE LIEU ══════════ -->
-    <section class="lieu paper" id="lieu">
-      <div class="section-head">
-        <span class="section-head__num">01</span>
-        <span class="section-head__label">Le lieu</span>
-      </div>
-
-      <h3 class="lieu__title" data-reveal>
-        Une ancienne <em>galerie d'art</em> devenue
-        <span class="u-red">cave à danser.</span>
-      </h3>
-
-      <div class="lieu__grid">
-        <div class="lieu__text" data-reveal>
-          <p>
-            Sur l'île de Nantes, à deux pas des Machines, le Bras de Fer occupe
-            un ancien garage passé par la case galerie. Il en reste l'esprit&nbsp;:
-            des briques, du bois, des expos d'artistes locaux — et une grande
-            façade noire taguée qui annonce la couleur.
-          </p>
-          <p>
-            Dedans&nbsp;: un comptoir pour l'apéro, une mezzanine à canapés pour
-            souffler, une piste de danse sous la boule à facettes pour le reste.
-            Bar à vins le jour, cave festive la nuit.
-          </p>
-          <p class="lieu__quote">«&nbsp;Du bon vin, de la bonne bouffe, des copains.&nbsp;»</p>
-          <ul class="lieu__facts">
-            <li data-reveal><b>01</b><span>Le comptoir &amp; la terrasse cachée</span></li>
-            <li data-reveal><b>02</b><span>La mezzanine à canapés — privatisable</span></li>
-            <li data-reveal><b>03</b><span>La piste de danse, sous la boule à facettes</span></li>
-            <li data-reveal><b>04</b><span>La cave à emporter, prix caviste</span></li>
-          </ul>
-        </div>
-
-        <div class="lieu__photos">
-          <figure class="photo" data-reveal>
-            <img src="assets/img/mural.jpg" alt="La fresque Bras de Fer" />
-            <figcaption>la façade côté rue</figcaption>
-          </figure>
-          <figure class="photo" data-reveal>
-            <img src="assets/img/facade.jpg" alt="La façade et la terrasse" />
-            <figcaption>la terrasse, boulevard de la Prairie au Duc</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ LA CAVE ══════════ -->
-    <section class="cave" id="cave">
-      <div class="section-head section-head--light">
-        <span class="section-head__num">02</span>
-        <span class="section-head__label">La cave &amp; le vin</span>
-      </div>
-
-      <div class="cave__big" data-reveal>
-        <span class="cave__number">70</span>
-        <span class="cave__number-label">références de<br />vins naturels</span>
-      </div>
-
-      <div class="cave__grid">
-        <div class="cave__text" data-reveal>
-          <p>
-            Derrière le comptoir, les frères <b>Benjamin &amp; Nicolas Ferchaud</b>.
-            Leur chai urbain est à moins d'un kilomètre — les cuvées maison,
-            comme <em>Les Enfants Sauvages</em> ou le pét-nat de pineau-d'aunis,
-            font le trajet à pied.
-          </p>
-          <p>
-            Autour&nbsp;: une sélection de vigneron·nes vivants et sincères,
-            à boire sur place au verre ou à emporter, prix cave.
-          </p>
-          <ul class="cave__list">
-            <li><span>Patrick Bouju</span><i>Auvergne</i></li>
-            <li><span>Sébastien Chatillon</span><i>Rhône</i></li>
-            <li><span>Fond Cyprès</span><i>Corbières</i></li>
-            <li><span>Les cuvées maison</span><i>chai urbain, Nantes</i></li>
-          </ul>
-          <p class="cave__note">Cave à emporter du mardi au samedi, 16h — 22h.</p>
-        </div>
-
-        <div class="cave__photos">
-          <figure class="photo photo--dark photo--wide" data-reveal>
-            <img src="assets/img/cave-mur.jpg" alt="Le mur de bouteilles" />
-            <figcaption>le mur de la cave</figcaption>
-          </figure>
-          <figure class="photo photo--dark" data-reveal>
-            <img src="assets/img/bouteille.jpg" alt="Une quille et un verre" />
-            <figcaption>servi au verre</figcaption>
-          </figure>
-          <figure class="photo photo--dark" data-reveal>
-            <img src="assets/img/roses.jpg" alt="Bouteilles de rosé en cave" />
-            <figcaption>la réserve</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- marquee -->
-    <div class="marquee marquee--paper">
-      <div class="marquee__track">
-        <span>Poulet tandoori ✶ Kefta de bœuf ✶ Beurre café de Paris ✶ Houmous ✶ Gratin dauphinois ✶ Terrine au whisky ✶ </span><span>Poulet tandoori ✶ Kefta de bœuf ✶ Beurre café de Paris ✶ Houmous ✶ Gratin dauphinois ✶ Terrine au whisky ✶ </span>
-      </div>
-    </div>
-
-    <!-- ══════════ LA CUISINE ══════════ -->
-    <section class="cuisine paper" id="cuisine">
-      <div class="section-head">
-        <span class="section-head__num">03</span>
-        <span class="section-head__label">La cuisine</span>
-      </div>
-
-      <h3 class="cuisine__title" data-reveal>
-        <span class="cuisine__script">On grille,</span>
-        <span class="cuisine__slab">ON SAUCE&nbsp;!</span>
-      </h3>
-
-      <p class="cuisine__intro" data-reveal>
-        Le soir, la braise prend le relais&nbsp;: brochettes grillées, sauces
-        généreuses, entrées à partager. Simple, direct, fait pour accompagner
-        les quilles. Service du mardi au samedi, 19h — 22h.
-      </p>
-
-      <div class="menu" data-reveal>
-        <div class="menu__col">
-          <h4>Entrées — à partager</h4>
-          <ul>
-            <li><span>Houmous</span><b>6€</b></li>
-            <li><span>Œufs mayo, œufs de poisson, ponzu</span><b>6€</b></li>
-            <li><span>Poireaux vinaigrette</span><b>7€</b></li>
-            <li><span>Chou-fleur grillé, laoganma</span><b>7€</b></li>
-            <li><span>Terrine de cochon au whisky</span><b>7€</b></li>
-          </ul>
-        </div>
-        <div class="menu__col">
-          <h4>Brochettes</h4>
-          <ul>
-            <li><span>Poulet tandoori</span><b>8€</b></li>
-            <li><span>Bœuf, beurre café de Paris</span><b>8€</b></li>
-            <li><span>Poitrine de cochon à la sichuanaise</span><b>8€</b></li>
-            <li><span>Kefta de bœuf, sauce blanche cornichon</span><b>8€</b></li>
-          </ul>
-          <h4>Pour saucer</h4>
-          <ul>
-            <li><span>Gratin dauphinois traditionnel</span><b>6€</b></li>
-            <li><span>Purée de pommes de terre, ciboulette</span><b>6€</b></li>
-            <li><span>Salade, patates, crème crue, herbes</span><b>6€</b></li>
-          </ul>
-        </div>
-        <figure class="polaroid polaroid--menu1" data-parallax="30">
-          <img src="assets/img/houmous.jpg" alt="Houmous à partager" />
-          <figcaption>à partager</figcaption>
-        </figure>
-        <figure class="polaroid polaroid--menu2" data-parallax="60">
-          <img src="assets/img/brochette.jpg" alt="Brochette kefta" />
-          <figcaption>kefta, sauce blanche</figcaption>
-        </figure>
-      </div>
-
-      <p class="cuisine__note" data-reveal>
-        Carte courte et de saison — elle bouge. La carte du moment est sur
-        <a href="https://www.instagram.com/brasdefernantes/" target="_blank" rel="noopener">Instagram</a>.
-      </p>
-    </section>
-
-    <!-- ══════════ LES SOIRÉES ══════════ -->
-    <section class="soirees" id="soirees">
-      <div class="section-head section-head--light">
-        <span class="section-head__num">04</span>
-        <span class="section-head__label">Les soirées</span>
-      </div>
-
-      <h3 class="soirees__title" data-reveal>
-        <span>ET PUIS,</span>
-        <span class="u-red">ÇA DANSE.</span>
-      </h3>
-
-      <p class="soirees__intro" data-reveal>
-        Quand la cuisine ferme, la boule à facettes prend le service.
-        DJ sets de la scène locale et d'ailleurs, expos, ventes de disques,
-        soirées maison — jusqu'à 2h du matin.
-      </p>
-
-      <ul class="soirees__list">
-        <li data-reveal><i>✶</i><div><b>DJ sets</b><span>house, disco, funk — du mercredi au samedi selon l'humeur</span></div></li>
-        <li data-reveal><i>✶</i><div><b>Expositions</b><span>artistes locaux aux murs, vernissages arrosés</span></div></li>
-        <li data-reveal><i>✶</i><div><b>Ventes de disques</b><span>crates de vinyles entre deux verres</span></div></li>
-        <li data-reveal><i>✶</i><div><b>Privatisation</b><span>la mezzanine pour vos anniversaires &amp; pots de départ</span></div></li>
+    <div class="soirees__wrap">
+      <button class="soirees__arrow soirees__arrow--prev" id="prevPoster" aria-label="Précédent">‹</button>
+      <ul class="soirees__track reveal-kids" id="posterTrack">
+        <li class="poster poster--orange">
+          <h3>DJ Set</h3>
+          <p class="poster__date">Samedi 18 mai<br />20h – 2h</p>
+          <p class="poster__style">Psych / Disco</p>
+          <span class="poster__vinyl" aria-hidden="true"></span>
+          <p class="poster__price">Prix libre</p>
+        </li>
+        <li class="poster poster--cream">
+          <h3>Concert</h3>
+          <p class="poster__date">Jeudi 23 mai<br />20h30</p>
+          <p class="poster__style">Duo folk<br />acoustique</p>
+          <p class="poster__price">Prix libre</p>
+        </li>
+        <li class="poster poster--expo">
+          <h3>Expo</h3>
+          <p class="poster__date">Vernissage<br />vendredi 24 mai<br />19h</p>
+          <p class="poster__style">Art &amp;<br />illustration</p>
+        </li>
+        <li class="poster poster--pink">
+          <h3>Rendez-<br />vous</h3>
+          <p class="poster__date">Vendredi 31 mai<br />19h – 22h</p>
+          <p class="poster__style">Spécial<br />vin nature</p>
+          <p class="poster__price">Prix libre</p>
+        </li>
+        <li class="poster poster--teal">
+          <h3>DJ Set</h3>
+          <p class="poster__date">Samedi 1<sup>er</sup> juin<br />20h – 22h</p>
+          <p class="poster__style">Groovy<br />&amp; Love</p>
+          <span class="poster__disco" aria-hidden="true"></span>
+          <p class="poster__price">Prix libre</p>
+        </li>
       </ul>
+      <button class="soirees__arrow soirees__arrow--next" id="nextPoster" aria-label="Suivant">›</button>
+    </div>
+    <img class="spark spark--soirees" src="assets/img/etoile.png" alt="" aria-hidden="true" />
+  </section>
 
-      <p class="soirees__cta" data-reveal>
-        Toute la programmation est annoncée sur
-        <a href="https://www.instagram.com/brasdefernantes/" target="_blank" rel="noopener">@brasdefernantes&nbsp;↗</a>
-      </p>
-    </section>
+  <!-- ══════════ INFOS ══════════ -->
+  <section class="infos section paper-bg torn-top" id="infos">
+    <div class="infos__col reveal">
+      <span class="chip chip--blue">Infos pratiques</span>
+      <ul class="infos__list">
+        <li>
+          <span class="infos__ico"><img src="assets/img/ico-pin.png" alt="" /></span>
+          <span>20 boulevard de la Prairie au Duc<br />44200 Nantes</span>
+        </li>
+        <li>
+          <span class="infos__ico"><img src="assets/img/ico-tel.png" alt="" /></span>
+          <a href="tel:0272016630">02 72 01 66 30</a>
+        </li>
+        <li>
+          <span class="infos__ico"><img src="assets/img/ico-insta.png" alt="" /></span>
+          <a href="https://www.instagram.com/brasdefernantes/" target="_blank" rel="noopener">@brasdefernantes</a>
+        </li>
+      </ul>
+    </div>
 
-    <!-- ══════════ INFOS ══════════ -->
-    <section class="infos paper" id="infos">
-      <div class="section-head">
-        <span class="section-head__num">05</span>
-        <span class="section-head__label">Infos pratiques</span>
-      </div>
+    <div class="infos__col reveal">
+      <span class="chip chip--yellow">Horaires</span>
+      <ul class="infos__list">
+        <li>
+          <span class="infos__ico"><img src="assets/img/ico-horloge.png" alt="" /></span>
+          <span>Mar – Mer : 16h – 00h<br />Jeu – Sam : 16h – 02h</span>
+        </li>
+        <li>
+          <span class="infos__ico"><img src="assets/img/ico-assiette.png" alt="" /></span>
+          <span>Restauration : 19h – 22h</span>
+        </li>
+      </ul>
+    </div>
 
-      <div class="infos__grid">
-        <div class="infos__block" data-reveal>
-          <h4>Horaires</h4>
-          <ul class="infos__hours">
-            <li><span>Bar</span><b>mar — sam · 16h — 2h</b></li>
-            <li><span>Cave à emporter</span><b>mar — sam · 16h — 22h</b></li>
-            <li><span>Restauration</span><b>mar — sam · 19h — 22h</b></li>
-            <li><span>Dimanche &amp; lundi</span><b>fermé</b></li>
-          </ul>
-        </div>
-        <div class="infos__block" data-reveal>
-          <h4>Nous trouver</h4>
-          <p class="infos__address">
-            20 boulevard de la Prairie au Duc<br />
-            44200 Nantes — île de Nantes
-          </p>
-          <a class="infos__link" href="https://maps.google.com/?q=Bras+de+Fer+20+boulevard+de+la+Prairie+au+Duc+44200+Nantes" target="_blank" rel="noopener">Ouvrir dans Maps ↗</a>
-          <p class="infos__transit">Tram — arrêt République</p>
-        </div>
-        <div class="infos__block" data-reveal>
-          <h4>Contact</h4>
-          <a class="infos__link" href="tel:+33272016630">02 72 01 66 30</a>
-          <a class="infos__link" href="mailto:resa.brasdefer@gmail.com">resa.brasdefer@gmail.com</a>
-          <a class="infos__link" href="https://www.instagram.com/brasdefernantes/" target="_blank" rel="noopener">@brasdefernantes ↗</a>
-        </div>
-      </div>
+    <div class="infos__col reveal">
+      <span class="chip chip--pink">Réservez une table</span>
+      <p>Pour dîner ou pour le bar,<br />pensez à réserver votre table.</p>
+      <a class="btn btn--red" href="tel:0272016630">Réserver en ligne</a>
+      <p class="infos__phone">Ou appelez-nous au<br /><a href="tel:0272016630"><strong>02 72 01 66 30</strong></a></p>
+    </div>
 
-      <a class="infos__resa" href="mailto:resa.brasdefer@gmail.com" data-reveal>
-        <span>Réserver une table</span>
-        <i>→</i>
-      </a>
-    </section>
-
-  </main>
+    <a class="infos__map reveal" href="https://maps.google.com/?q=20+boulevard+de+la+Prairie+au+Duc+44200+Nantes" target="_blank" rel="noopener">
+      <span class="infos__pin" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 22s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z" fill="#E77CAC"/><circle cx="12" cy="10" r="2.6" fill="#16130F"/></svg>
+      </span>
+      <span class="infos__maplabel">Île de Nantes</span>
+    </a>
+  </section>
 
   <!-- ══════════ FOOTER ══════════ -->
-  <footer class="footer">
-    <img class="footer__logo" src="assets/img/logo.png?v=2" alt="" data-parallax="-20" />
-    <p class="footer__word">BRAS DE FER</p>
-    <p class="footer__tag">Cave festive · Bar à vins · Restaurant — Nantes</p>
-    <p class="footer__legal">© Bras de Fer Nantes — l'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+  <footer class="footer torn-top">
+    <div class="footer__brand">
+      <span class="footer__logo"><img src="assets/img/logo.png?v=2" alt="" /></span>
+      <span>Bras de Fer — Nantes</span>
+    </div>
+    <nav class="footer__legal">
+      <a href="#">Mentions légales</a>
+      <a href="#">CGV</a>
+      <a href="#">Politique de confidentialité</a>
+    </nav>
+    <div class="footer__social">
+      <span>Suivez-nous</span>
+      <a href="https://www.instagram.com/brasdefernantes/" target="_blank" rel="noopener" aria-label="Instagram">
+        <img class="footer__insta" src="assets/img/ico-insta.png" alt="" />
+      </a>
+      <a href="https://www.facebook.com/brasdefernantes/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v9h4v-9h3l1-4h-4V8.5A.5.5 0 0 1 14 8z" fill="currentColor"/></svg>
+      </a>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="main.js?v=25"></script>
+  <script src="main.js?v=42"></script>
 </body>
 </html>
