@@ -1176,11 +1176,30 @@ body.is-locked { overflow: hidden; }
     background: url("assets/img/papier-noir.png") center / cover no-repeat, var(--ink);
     padding: 1.6rem 5vw 2rem;
   }
-  .hero { min-height: auto; padding-top: 3.5rem; }
+  /* texture papier noir moins zoomée sur mobile */
+  .nav, .hero, .cuisine, .cave, .menu-hero, .intro {
+    background-size: 820px auto;
+    background-repeat: repeat;
+    background-position: top left;
+  }
+  .hero { min-height: auto; padding: 2.8rem 6vw 4.5rem; }
   .hero { flex-direction: column; align-items: flex-start; }
+  .hero__ico { width: 34px; height: 34px; }
+  .hero__ico svg { width: 16px; height: 16px; }
+  /* mobile : pas de photos de plats */
+  .plate { display: none; }
+  /* mobile : cave 100% bleue, sans noir ni fondu */
+  .cave { background: var(--blue); }
+  .cave::before {
+    top: 0;
+    bottom: 0;
+    background: url("assets/img/papier-bleu.png") center / cover no-repeat, var(--blue);
+  }
   /* en colonne + align flex-start, le contenu passe en max-content et déborde : on force 100% */
   .hero__content { width: 100%; }
-  .hero__note { position: relative; top: auto; right: auto; bottom: auto; width: 190px; margin-top: 2.2rem; display: inline-block; }
+  .hero__note { top: auto; bottom: 3.8rem; right: 5vw; width: 150px; }
+  .hero__content { padding-bottom: 7.5rem; }
+  .spark--hero { left: 12%; bottom: 4.5rem; }
   .hero__logo { display: none; }
   .hero__days, .hero__hours { margin-left: 0; }
   .section h2 { font-size: clamp(1.5rem, 6.4vw, 2.4rem); }
