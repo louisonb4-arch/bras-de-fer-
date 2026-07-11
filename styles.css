@@ -1184,10 +1184,22 @@ body.is-locked { overflow: hidden; }
     background-repeat: repeat;
     background-position: top left;
   }
-  .hero { min-height: auto; padding: 2.8rem 6vw 4.5rem; }
+  .hero { min-height: auto; padding: 3.2rem 6vw 5.5rem; }
   .hero { flex-direction: column; align-items: flex-start; }
-  .hero__ico { width: 34px; height: 34px; }
-  .hero__ico svg { width: 16px; height: 16px; }
+  /* nav : bouton réserver visible comme la maquette */
+  .nav__resa { display: inline-block; }
+  /* horaires : liste verticale, icônes lilas sans cercle, séparateurs fins */
+  .hero__hours { position: relative; z-index: 2; margin-top: 2.2rem; }
+  .hero__hours li {
+    width: 58%;
+    max-width: 260px;
+    padding-bottom: 1rem;
+    border-bottom: 1.5px solid rgba(169, 143, 227, .55);
+  }
+  .hero__hours li:last-child { border-bottom: none; }
+  .hero__ico { border: none; width: 38px; height: 38px; color: var(--lilac); }
+  .hero__ico svg { width: 26px; height: 26px; }
+  .hero__ico--img img { filter: invert(66%) sepia(32%) saturate(1400%) hue-rotate(216deg) brightness(1.05); }
   /* mobile : pas de grille de plats du tout */
   .cuisine__plates { display: none; }
   /* mobile : cave 100% bleue, texture surdimensionnée pour sortir les bords déchirés du cadre */
@@ -1199,11 +1211,32 @@ body.is-locked { overflow: hidden; }
   }
   /* en colonne + align flex-start, le contenu passe en max-content et déborde : on force 100% */
   .hero__content { width: 100%; }
-  .hero__note { top: auto; bottom: 3.8rem; right: 5vw; width: 150px; }
-  .hero__content { padding-bottom: 7.5rem; }
-  .spark--hero { left: 12%; bottom: 4.5rem; }
-  .hero__logo { display: none; }
-  .hero__days, .hero__hours { margin-left: 0; }
+  /* hero façon maquette : pas de chip ni trait ni note-photo */
+  .hero__days, .hero__scribble, .hero__note { display: none; }
+  /* logo grand à droite, chevauche les horaires */
+  .hero__logo { display: block; right: -10vw; top: 56%; width: 64vw; z-index: 1; }
+  /* note encadrée façon maquette */
+  .hero__content::after {
+    content: "Bières naturelles\a Vins vivants\a Cuisine locale\a & musiques libres";
+    white-space: pre;
+    display: inline-block;
+    margin-top: 2.4rem;
+    padding: 1.1rem 1.4rem;
+    border: 2px solid rgba(239, 231, 214, .8);
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: .82rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    line-height: 2.1;
+    color: var(--cream);
+    position: relative;
+    z-index: 2;
+    transform: rotate(-.6deg);
+  }
+  /* étoile lilas centrée en bas */
+  .spark--hero { left: 50%; margin-left: -26px; bottom: 2.6rem; filter: hue-rotate(55deg); }
+  .hero__hours { margin-left: 0; }
   .section h2 { font-size: clamp(1.5rem, 6.4vw, 2.4rem); }
   .lieu { grid-template-columns: 1fr; gap: 3rem; }
   .lieu__collage {
@@ -1222,8 +1255,8 @@ body.is-locked { overflow: hidden; }
   .cave__panel { grid-column: auto; flex-direction: column; }
   .hero__hours { flex-direction: column; gap: .9rem; }
   .hero__scribble { width: 200px; }
-  .hero__line { font-size: clamp(2.4rem, 11vw, 3.4rem); }
-  .hero__marker { font-size: clamp(1.5rem, 7vw, 2.2rem); }
+  .hero__line { font-size: clamp(2.6rem, 12.5vw, 3.9rem); }
+  .hero__marker { font-size: clamp(1.6rem, 8vw, 2.5rem); }
   .soirees__arrow { display: none; }
   .lieu__collage .sticker--green { left: -12px; width: 84px; }
   .lieu__collage .sticker--goodtimes { width: 84px; }
