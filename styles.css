@@ -845,7 +845,9 @@ body.is-locked { overflow: hidden; }
   scroll-snap-align: start;
   padding: 1.3rem 1.2rem;
   border: 2px solid rgba(239,231,214,.2);
-  filter: url(#rough-edge-soft) drop-shadow(0 14px 22px rgba(0,0,0,.45));
+  /* clip-path (pas de displacement : artefacts carrés sur iOS) */
+  clip-path: polygon(1.2% 1.5%, 12% .5%, 24% 1.6%, 36% .4%, 48% 1.5%, 60% .6%, 72% 1.7%, 84% .5%, 96% 1.4%, 99% 2%, 98.5% 12%, 99.4% 24%, 98.4% 36%, 99.5% 48%, 98.5% 60%, 99.4% 72%, 98.6% 84%, 99.2% 96%, 97% 99%, 86% 98.4%, 74% 99.4%, 62% 98.3%, 50% 99.5%, 38% 98.4%, 26% 99.3%, 14% 98.5%, 3% 99.2%, 1% 97%, 1.6% 86%, .5% 74%, 1.5% 62%, .4% 50%, 1.6% 38%, .6% 26%, 1.5% 14%, .8% 4%);
+  filter: drop-shadow(0 14px 22px rgba(0,0,0,.45));
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1186,14 +1188,14 @@ body.is-locked { overflow: hidden; }
   .hero { flex-direction: column; align-items: flex-start; }
   .hero__ico { width: 34px; height: 34px; }
   .hero__ico svg { width: 16px; height: 16px; }
-  /* mobile : pas de photos de plats */
-  .plate { display: none; }
-  /* mobile : cave 100% bleue, sans noir ni fondu */
+  /* mobile : pas de grille de plats du tout */
+  .cuisine__plates { display: none; }
+  /* mobile : cave 100% bleue, texture surdimensionnée pour sortir les bords déchirés du cadre */
   .cave { background: var(--blue); }
   .cave::before {
     top: 0;
     bottom: 0;
-    background: url("assets/img/papier-bleu.png") center / cover no-repeat, var(--blue);
+    background: url("assets/img/papier-bleu.png") center / 130% 130% no-repeat, var(--blue);
   }
   /* en colonne + align flex-start, le contenu passe en max-content et déborde : on force 100% */
   .hero__content { width: 100%; }
